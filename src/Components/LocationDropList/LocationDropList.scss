@@ -1,0 +1,11 @@
+@import "../../Styles/mixins.scss";
+
+section.section_drop_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    
+    article.drop_list_choise {
+        @include select_field;
+    }
+}

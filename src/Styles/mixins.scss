@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+@mixin flex_space_between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin center {
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+@mixin link {
+    text-decoration: none;
+    color: black;
+    transition: $transition;
+}
+
+@mixin position_fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+}
+
+@mixin justify-content {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin select_field {
+    margin: auto;
+    border: .7px solid lighten($color: #000000, $amount: 75);
+    padding: 15px;
+    width: 500px;
+    cursor: pointer;
+    background-color: $header_footer_background;
+    transition: $transition;
+
+    &:hover {
+        background-color: darken($color: #fff, $amount: 15);
+        border-color: #fff;
+    }
+}
+
+@mixin absolute_center {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}

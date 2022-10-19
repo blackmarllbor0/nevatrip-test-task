@@ -1,0 +1,60 @@
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+header {
+    -webkit-box-shadow: -1px 12px 6px -4px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: -1px 12px 6px -4px rgba(34, 60, 80, 0.2);
+    box-shadow: -1px 12px 6px -4px rgba(34, 60, 80, 0.2);
+    background-color: $header_footer_background;
+    
+    @include position_fixed;
+    top: 0;
+
+    div {
+        @include center;
+        @include flex_space_between;
+
+        a {
+            img {
+                width: 95px;
+                height: 35px;
+            }
+        }
+    
+        div {
+            display: flex;
+            gap: 2rem;
+        }
+    
+        article {
+            margin-top: 8px;
+    
+            a {
+                @include link;
+    
+                &:hover {
+                    color: $link_hover_color;
+                    border-bottom: .5px solid black;
+                }
+            }
+        }
+    
+        button {
+            border: none;
+            background-color: lighten($color: #000, $amount: 100);
+            cursor: pointer;
+            margin-top: 6px;
+            transition: $transition;
+            border-radius: 15px;
+
+            &:hover {
+                background-color: darken($color: #fff, $amount: 10);
+            }
+            
+            img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}

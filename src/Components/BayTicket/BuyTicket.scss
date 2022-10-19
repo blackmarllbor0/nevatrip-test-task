@@ -1,0 +1,18 @@
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+section.drop_list {
+    margin-top: 100px;
+    
+    div {
+        @include center;
+    }
+
+    h1, .location_drop_list {
+        @include justify-content;
+    }
+
+    .location_drop_list {
+        @include select_field;
+    }
+}

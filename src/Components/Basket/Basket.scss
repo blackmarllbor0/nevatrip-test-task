@@ -1,0 +1,93 @@
+@import "../../Styles/variables.scss";
+@import "../../Styles/mixins.scss";
+
+div.basket {
+    @include absolute_center;
+    top: 49.3%;
+    -webkit-box-shadow: 0px -2px 8px 18px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px -2px 8px 18px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px -2px 8px 18px rgba(34, 60, 80, 0.2);
+    width: 900px;
+    height: 800px;
+    background-color: $header_footer_background;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+
+    div.basket_header {
+        h1.close {
+            position: absolute;
+            right: 5%;            
+            top: 2%;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+    }
+
+    div.basket_tickets {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        div.user_ticket {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            border: 1px solid black;
+            padding: 15px;
+            width: 550px;
+            border-radius: 15px;
+
+            .basket_user_id {
+                font-weight: 500;
+            }
+
+            .ticket_block {
+                border: 1px solid black;
+                padding: 15px;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 350px;
+
+                .remote {
+                    display: flex;
+                    gap: 1rem;
+
+                    p {
+                        font-size: 25px;
+                        font-weight: 300;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        div.buy_tickets {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            button {
+                width: 350px;
+                height: 75px;
+                background-color: #868686;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 35px;
+                cursor: pointer;
+                transition: all .2s linear;
+
+                &:hover {
+                    background-color: darken($color: #868686, $amount: 15);
+                }
+            }
+        }
+    }
+}

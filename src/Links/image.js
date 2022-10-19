@@ -1,0 +1,1 @@
+export const mainBanner = 'https://wac-cdn.atlassian.com/dam/jcr:c942540c-53ae-4357-bffa-ed37739d71b0/bitbucket-atlassian-logo.svg?cdnVersion=582';
